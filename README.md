@@ -85,7 +85,7 @@ input text goes in `Papers_text/`, output goes in `Text_mining_results/`.
 
 ## data
 
-input spectra and previous annotations: MassIVE `MSV000088598` (doi:10.25345/C52K34, `ftp://massive-ftp.ucsd.edu/v04/MSV000088598/`) and files are `cluster_ident_2.mgf` and `cluster_ident_n.mgf` and the ANN-SoLo results are `cluster_ident_2.mztab` and `cluster_ident_n.mztab`. Together about 168 GB.
+input spectra and previous annotations: MassIVE `MSV000088598` (doi:10.25345/C52K34, `ftp://massive-ftp.ucsd.edu/v04/MSV000088598/`) and files are `cluster_ident_2.mgf` and `cluster_ident_n.mgf` and the ANN-SoLo results are `cluster_ident_2.mztab` and `cluster_ident_n.mztab`-> together about 168 GB.
 
 Casanovo output for the 39,413,436 unidentified medoid spectra, plus supplementary tables and files: Zenodo, doi:10.5281/zenodo.22305568.
 
