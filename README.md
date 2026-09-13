@@ -37,10 +37,10 @@ run the scripts in this order. Each script has its input and output paths as con
    output: `cluster_unannotated_2.mgf`, `cluster_unannotated_n.mgf`
    run `python filter_mgf.py --preview` first to check the mapping
 
-2. **run_casanovo.sh**
+2. **[run_casanovo.sh](https://github.com/fatemehmirzade/p_denovo_foreign/blob/main/Codes/run_casanovo.sh)**
    slurm script that runs Casanovo 5.1.2 on both unannotated MGF files with default settings (`casanovo sequence <file>.mgf --model casanovo_v5_0_0.ckpt`). Needs one GPU. Casanovo only supports precursor charges 1 to 4 and skips the rest -> Output: one mzTab per MGF.
 
-3. **convert_mztab_tsv.py**
+3. **[convert_mztab_tsv.py](https://github.com/fatemehmirzade/p_denovo_foreign/blob/main/Codes/convert_mztab_tsv.py)**
    converts the PSM section of each Casanovo mzTab into a TSV file.
 
 4. **[filter_by_casanovo_score.py](https://github.com/fatemehmirzade/p_denovo_foreign/blob/main/Codes/filter_by_casanovo_score.py)** keeps a PSM if the Casanovo score is at least 0.6 or between -0.4 and 0.0.
@@ -69,7 +69,7 @@ extract metadata from the papers of the 216 datasets, using DocETL agents& it is
 
 1. **[prepare_data.py](https://github.com/fatemehmirzade/p_denovo_foreign/blob/main/Text_mining_pipeline/prepare_data.py)** read the paper text, splits it into sections (abstract, methods, supplementary and others), clean it and write `papers_dataset.json`.
 
-2. **DocETL configurations.** one YAML per metadata category. Each one runs a map operation over the papers and extracts a set of fields:
+2. **DocETL** one YAML per metadata category. Each one runs a map operation over the papers and extracts a set of fields:
    example for running -> docetl run 01_biological_info.yaml
    - `01_biological_info.yaml`: organism, strain, age, sex, organism part, specimen, treatment
    - `02_ms_instruments.yaml`: instrument, acquisition method, fragmentation, mass tolerances
