@@ -1,8 +1,6 @@
 # Characterizing Unexpected Peptides in Human Proteomics Data Using De Novo Peptide Sequencing
 
-code and results for the de novo analysis of the GLEAMS dark proteome.
-
-this pipeline takes the unidentified medoid spectra of MassIVE dataset MSV000088598, runs Casanovo on them, filters the predictions, splits them per dataset, removes human peptides and assigns the rest to taxa with Unipept.
+our pipeline take the unidentified medoid spectra of MassIVE dataset MSV000088598, run Casanovo on it, filter the predictions, splits them per dataset, removes human peptides and assigns the rest to taxa with Unipept.
 
 | Step | Spectra or peptides |
 |------|---------------------|
