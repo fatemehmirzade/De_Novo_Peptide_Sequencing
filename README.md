@@ -35,7 +35,7 @@ run the scripts in this order -> each script has its input and output paths as c
    remove the spectra that ANN-SoLo already identified & reads the `spectra_ref` index of every PSM in the mzTab and streams the MGF, keeping only the spectra with no PSM.
    input: `cluster_ident_2.mgf`, `cluster_ident_n.mgf` and the matching mzTab files output: `cluster_unannotated_2.mgf`, `cluster_unannotated_n.mgf`
    
-3. **[run_casanovo.sh](https://github.com/fatemehmirzade/De_Novo_Peptide_Sequencing/blob/main/Codes/run_casanovo.sh)**
+3. **[run_casanovo.sh](https://github.com/fatemehmirzade/De_Novo_Peptide_Sequencing/blob/main/Codes/Run_casanovo.sh)**
    slurm script that runs Casanovo 5.1.2 on both unannotated MGF files with default settings (`casanovo sequence <file>.mgf --model casanovo_v5_0_0.ckpt`). Casanovo only supports precursor charges 1 to 4 and skips the rest -> Output: one mzTab per MGF.
 
 4. **[convert_mztab_tsv.py](https://github.com/fatemehmirzade/De_Novo_Peptide_Sequencing/blob/main/Codes/convert_mztab_tsv.py)**
