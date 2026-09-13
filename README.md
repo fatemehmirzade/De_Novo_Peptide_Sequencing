@@ -70,7 +70,9 @@ extract metadata from the papers of the 216 datasets, using DocETL agents& it is
 1. **[prepare_data.py](https://github.com/fatemehmirzade/p_denovo_foreign/blob/main/Text_mining_pipeline/prepare_data.py)** read the paper text, splits it into sections (abstract, methods, supplementary and others), clean it and write `papers_dataset.json`.
 
 2. **DocETL** one YAML per metadata category. Each one runs a map operation over the papers and extracts a set of fields:
+   
    example for running -> docetl run 01_biological_info.yaml
+   
    - `01_biological_info.yaml`: organism, strain, age, sex, organism part, specimen, treatment
    - `02_ms_instruments.yaml`: instrument, acquisition method, fragmentation, mass tolerances
    - `03_sample_prep.yaml`: labeling, enzyme, sample preparation
